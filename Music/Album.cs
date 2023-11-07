@@ -4,8 +4,14 @@ namespace Music
 {
     class Album
     {
-        private List<Music> musicList = new List<Music>();
         public string Name { get; set; }
+        private List<Music> musicList = new List<Music>();
+
+        public Album(string name)
+        {
+            Name = name;
+        }
+
         public float TotalDuration => musicList.Sum(music => music.DurationInMinutes);
 
         public void AddMusic(Music music)

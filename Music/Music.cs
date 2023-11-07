@@ -2,14 +2,14 @@
 {
     class Music
     {
-        public string Artist { get; set; }
+        public Band Artist { get;}
         public string Title { get; set; }
         public float DurationInMinutes { get; set; }
         public bool Avalaible { get; set; }
         public string ShortDescription => 
             $"This music {Title} is from {Artist} and lasts {DurationInMinutes.ToString().Replace(',', ':')} minutes.";
 
-        public Music(string artist, string title, float duration, bool avalaible)
+        public Music(Band artist, string title, float duration, bool avalaible)
         {
             this.Artist = artist;
             this.Title = title;
